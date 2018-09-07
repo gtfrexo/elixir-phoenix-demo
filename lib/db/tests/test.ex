@@ -13,7 +13,7 @@ defmodule Db.Tests.Test do
   @doc false
   def changeset(test, attrs) do
     test
-    |> cast(attrs, [:testing])
-    |> validate_required([:testing])
+    |> cast(attrs, [:testing, :gender_id])
+    |> validate_required([:testing, :gender_id])
   end
 end

@@ -12,6 +12,7 @@ defmodule DbWeb.TestView do
 
   def render("test.json", %{test: test}) do
     %{id: test.id,
-      testing: test.testing}
+      testing: test.testing,
+      gender_id: test.gender_id}
   end
 end

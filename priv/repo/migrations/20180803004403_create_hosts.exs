@@ -6,6 +6,7 @@ defmodule Db.Repo.Migrations.CreateHosts do
       add :description, :string
       add :name, :string
       add :name_full, :string
+      add :venue_id, :id
 
       timestamps()
     end

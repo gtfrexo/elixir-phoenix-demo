@@ -14,8 +14,7 @@ defmodule Db.Hosts.Host do
   @doc false
   def changeset(host, attrs) do
     host
-    #|> Db.Repo.preload(:venue_id)
-    |> cast(attrs, [:description, :name, :name_full])
-    |> validate_required([:description, :name, :name_full])
+    |> cast(attrs, [:description, :name, :name_full, :venue_id])
+    |> validate_required([:description, :name, :name_full, :venue_id])
   end
 end

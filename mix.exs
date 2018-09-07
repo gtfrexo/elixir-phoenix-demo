@@ -40,7 +40,8 @@ defmodule Db.Mixfile do
       {:absinthe_plug, "~> 1.4.4"},
       {:absinthe_ecto, git: "https://github.com/absinthe-graphql/absinthe_ecto.git"},
       {:faker, "0.10.0"},
-      {:cors_plug, "~> 1.5"}
+      {:cors_plug, "~> 1.5"},
+      {:dataloader, "~> 1.0.0"}
     ]
   end
 

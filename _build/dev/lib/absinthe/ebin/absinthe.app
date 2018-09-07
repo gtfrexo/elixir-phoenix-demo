@@ -136,6 +136,7 @@
                         'Elixir.Absinthe.Logger','Elixir.Absinthe.Middleware',
                         'Elixir.Absinthe.Middleware.Async',
                         'Elixir.Absinthe.Middleware.Batch',
+                        'Elixir.Absinthe.Middleware.Dataloader',
                         'Elixir.Absinthe.Middleware.MapGet',
                         'Elixir.Absinthe.Middleware.PassParent',
                         'Elixir.Absinthe.Phase',

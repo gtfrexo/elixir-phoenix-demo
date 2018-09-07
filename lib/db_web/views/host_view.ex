@@ -14,6 +14,7 @@ defmodule DbWeb.HostView do
     %{id: host.id,
       description: host.description,
       name: host.name,
-      name_full: host.name_full}
+      name_full: host.name_full,
+      venue_id: host.venue_id}
   end
 end

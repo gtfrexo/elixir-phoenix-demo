@@ -22,7 +22,7 @@ defmodule DbWeb.Schema do
             resolve &Db.Version_Resolver.all/2
         end
 
-        field :hosts, non_null(list_of(non_null(:host))) do
+        field :hosts, list_of(:host) do
             resolve &Db.Host_Resolver.all/2
         end
 
@@ -50,7 +50,7 @@ defmodule DbWeb.Schema do
             resolve &Db.Pool_Resolver.all/2
         end
 
-        field :venues, non_null(list_of(non_null(:venue))) do
+        field :venues, list_of(:venue) do
             resolve &Db.Venue_Resolver.all/2
         end
 
@@ -263,7 +263,7 @@ defmodule DbWeb.Schema do
 
     input_object :update_test_params do
         field :testing, :string
-        field :gender_id, :id
+        field :gender_id, :integer
     end
 
     mutation do
@@ -429,7 +429,7 @@ defmodule DbWeb.Schema do
 
         field :create_test, type: :test do
             arg :testing, :string
-            arg :gender_id, :id
+            arg :gender_id, :integer
 
             resolve &Db.Test_Resolver.create/2
         end

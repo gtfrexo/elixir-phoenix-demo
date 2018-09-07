@@ -53,7 +53,7 @@ defmodule DbWeb.Schema.Types do
         field :description, :string
         field :name, non_null(:string)
         field :name_full, :string
-        field :venue_id, :venue, resolve: assoc(:venue)
+        field :venue, :venue, resolve: assoc(:venue)
 
     end
 
