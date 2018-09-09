@@ -263,7 +263,7 @@ defmodule DbWeb.Schema do
 
     input_object :update_test_params do
         field :testing, :string
-        field :gender_id, :integer
+        field :gender, :id
     end
 
     mutation do
@@ -429,7 +429,7 @@ defmodule DbWeb.Schema do
 
         field :create_test, type: :test do
             arg :testing, :string
-            arg :gender_id, :integer
+            arg :gender, :id
 
             resolve &Db.Test_Resolver.create/2
         end

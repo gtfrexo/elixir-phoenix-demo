@@ -5,7 +5,7 @@ defmodule Db.Tests.Test do
 
   schema "tests" do
     field :testing, :string
-    field :gender_id, :id
+    belongs_to :gender, Db.Genders.Gender
 
     timestamps()
   end
@@ -13,7 +13,9 @@ defmodule Db.Tests.Test do
   @doc false
   def changeset(test, attrs) do
     test
-    |> cast(attrs, [:testing, :gender_id])
-    |> validate_required([:testing, :gender_id])
+    |> Db.Repo.preload(:gender)
+    |> cast(attrs, [:testing])
+    |> cast_assoc(:gender)
+    |> validate_required([:testing])
   end
 end

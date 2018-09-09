@@ -178,7 +178,7 @@ defmodule DbWeb.Schema.Types do
 
         field :id, non_null(:id)
         field :testing, :string
-        field :gender_id, :gender, resolve: assoc(:gender)
+        field :gender, :gender, resolve: assoc(:gender)
 
     end
 

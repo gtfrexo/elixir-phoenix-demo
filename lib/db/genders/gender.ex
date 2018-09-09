@@ -6,6 +6,7 @@ defmodule Db.Genders.Gender do
   schema "genders" do
     field :is_female, :boolean, default: false
     field :is_male, :boolean, default: false
+    has_one :gender, Db.Genders.Gender
 
     timestamps()
   end
