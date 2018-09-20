@@ -429,7 +429,7 @@ defmodule DbWeb.Schema do
 
         field :create_test, type: :test do
             arg :testing, :string
-            arg :gender, :id
+            arg :gender_id, :id
 
             resolve &Db.Test_Resolver.create/2
         end

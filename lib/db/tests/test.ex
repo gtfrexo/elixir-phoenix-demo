@@ -13,9 +13,7 @@ defmodule Db.Tests.Test do
   @doc false
   def changeset(test, attrs) do
     test
-    |> Db.Repo.preload(:gender)
-    |> cast(attrs, [:testing])
-    |> cast_assoc(:gender)
+    |> cast(attrs, [:testing, :gender_id])
     |> validate_required([:testing])
   end
 end
